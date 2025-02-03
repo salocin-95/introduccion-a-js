@@ -42,7 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
+let comidasFavoritas = ['choripan', 'asado', 'milanesas con papas fritas' ]
 
 
 
@@ -65,7 +65,7 @@
 // imprimi utilizando console.log el resultado.
 
 
-
+console.log(comidasFavoritas.length)
 
 
 
@@ -91,7 +91,7 @@
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
 
-
+console.log(comidasFavoritas[2])
 
 
 
@@ -116,16 +116,13 @@
 // con cualquier otra cosa.
 
 
-
+comidasFavoritas[0] = 'hamburguesas'
 
 
 
 // TAREA: console.log todo el array para verificar.
 
-
-
-
-
+console.log(comidasFavoritas)
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
 
@@ -147,14 +144,14 @@
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
 
-
+comidasFavoritas.push('pure')
 
 
 
 // TAREA: console.log todo el array para verificar.
 
 
-
+console.log(comidasFavoritas)
 
 
 
@@ -182,18 +179,19 @@
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
 
+const animales = ['gatos', 'perros']
 
 
-
-
+animales[1] = 'peces'
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
 
 
+animales.push('pajaros')
 
-
+console.log(animales)
 
 
 /*
@@ -246,7 +244,12 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+//let i = 11
 
+//while(i > 0) {
+//    i--
+//    console.log(i)
+//}
 
 
 
@@ -268,7 +271,11 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
+//let i;
 
+//for(i = 0; i <= 22; i = i + 3) {
+//    console.log(i)
+//}
 
 
 
@@ -296,8 +303,9 @@
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
-
-
+for(let i = 0; i < comidasFavoritas.length; i++){
+    console.log('Me gustan los ' + comidasFavoritas[i]);
+}
 
 
 
@@ -339,9 +347,21 @@
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
 
+let i;
 
+for( i= 0; i <= 50; i++ ){
 
+    if(i%3 == 0 && i%5 == 0) {
+        console.log('FizzBuzz')
+    } else if (i%3 == 0)  {
+        console.log('Fizz')
+    } else if (i%5 == 0)  {
+        console.log('Buzz')
+    } else {
+        console.log(i)
+    }
 
+}
 
 
 //////////////////////////////////////////////////////////////////////////////
