@@ -125,9 +125,9 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
+const nuestroTitulo = document.querySelector('h1');
 
-
-
+console.log(nuestroTitulo);
 
 /*
     Obteniendo elementos similares.
@@ -147,6 +147,7 @@
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
 
+const mediaLinks = document.querySelectorAll('li');
 
 
 
@@ -155,6 +156,7 @@
 // elementos li que hay con mediaLinks.length
 
 
+console.log(mediaLinks.length);
 
 
 
@@ -163,7 +165,9 @@
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 
-
+for(let i = 0; i < 5; i++) {
+    console.log(mediaLinks[i])
+} 
 
 
 
@@ -184,10 +188,7 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
-
-
-
+console.log(nuestroTitulo.textContent);
 
 /*
     Editar el contenido de la página
@@ -206,7 +207,7 @@
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
 
-
+nuestroTitulo.textContent = 'r/Argentina Programa Programa'
 
 
 /*
@@ -223,10 +224,9 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
+const imagen = document.querySelector('img')
 
-
-
-
+imagen.src = 'img/kittens.jpeg'
 
 /*
     Editando estilos
@@ -248,10 +248,7 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
-
+nuestroTitulo.style.backgroundColor = 'red';
 
 /*
    Creando nuevos nodos (Elementos)
@@ -278,10 +275,11 @@
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
-
-
-
-
+const nodoPagina = document.querySelector('h');
+const nuevoParrafo = document.createElement('div');
+const textoParrafo = document.createTextNode('Yeeee!');
+nuevoParrafo.appendChild(textoParrafo);
+nodoPagina.appendChild(nuevoParrafo);
 
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //
