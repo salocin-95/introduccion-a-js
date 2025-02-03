@@ -176,7 +176,7 @@
 
 
     // Esto es ilegal y devolverá un error igual al que se genera al cambiar cualquier constante:
-    animales = [ 'mouse', 'elephant' ];
+    animales = [ 'raton', 'elefante' ];
  */
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
