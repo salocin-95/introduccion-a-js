@@ -49,7 +49,7 @@ if (documentoUsuario === "no") {
     if (edadUsario > 18) {
         console.log("Podes entrar al bar");
     } else if (edadUsario < 18) {
-        console.log("No podes entrar al bar porque sos menor de")
+        console.log("No podes entrar al bar porque sos menor de edad")
     }  
 } 
 
