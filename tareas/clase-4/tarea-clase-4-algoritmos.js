@@ -65,26 +65,82 @@ usando  elementos de programación simples y clásicos.
 // }
 
 
-/*Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
- [1,2,3,4,5,6,7,8,9,10]
+// Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
+// [1,2,3,4,5,6,7,8,9,10]
 
- 1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
+// let result = 0;
 
-Desafío de programación #6: Calcula 10! (10 factorial)
+// let array = [1,2,3,4,5,6,7,8,9,10];
 
- 10 * 9 * 8 * ... * 1
+// for (i = 0; i < array.length; i++) {
+//   result += array[i]
+// }
 
-Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+// console.log(result)
 
-Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+// 1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
 
-Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+// Desafío de programación #6: Calcula 10! (10 factorial)
 
-Desafío de programación #10: Calcula la suma de todos los números en un array de números
+// const factorial = (numero) => {
+  
+  
+//   let result = 1;
+  
+//   for(i = numero; i > 1; i--) {
+//     result *= i;
 
-Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+//   }
 
-Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+//   return result
+
+// }
+
+// console.log(factorial(10));
+
+//  10 * 9 * 8 * ... * 1
+
+// Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+
+// let result = 0;
+
+// for(i = 10; i < 30; i++ ) {
+//   if (i%2 != 0)
+//     result += i
+// }
+
+// console.log(result)
+
+// Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+
+// const celsius = (fahrenheit) => Math.trunc((fahrenheit - 32) * 5 / 9);
+
+// console.log(celsius(256));
+
+// Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+
+// const fahrenheit = (celsius) => Math.trunc((celsius * 9/5) + 32);
+
+// console.log(fahrenheit(0))
+
+// Desafío de programación #10: Calcula la suma de todos los números en un array de números
+
+// Se resuelve igual que el anterior. #5
+
+// Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+
+const promedio = (array) => {
+  let result = 0;
+  for (i = array.length; i > 0; i--) {
+    result += array[i - 1]
+  }
+  console.log(result)
+  return result/array.length
+}
+
+console.log(promedio([23,4,3,4,3,4,3,4,3,4,3,4,3,4]))
+
+/*Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
 
 Desafío de programación #13: Find the maximum number in an array of numbers
 
