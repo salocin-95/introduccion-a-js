@@ -129,16 +129,16 @@ usando  elementos de programación simples y clásicos.
 
 // Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
 
-const promedio = (array) => {
-  let result = 0;
-  for (i = array.length; i > 0; i--) {
-    result += array[i - 1]
-  }
-  console.log(result)
-  return result/array.length
-}
+// const promedio = (array) => {
+//   let result = 0;
+//   for (i = array.length; i > 0; i--) {
+//     result += array[i - 1]
+//   }
+//   console.log(result)
+//   return result/array.length
+// }
 
-console.log(promedio([23,4,3,4,3,4,3,4,3,4,3,4,3,4]))
+// console.log(promedio([23,4,3,4,3,4,3,4,3,4,3,4,3,4]))
 
 /*Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
 
