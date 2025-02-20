@@ -178,31 +178,54 @@ usando  elementos de programación simples y clásicos.
 // Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 // El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 
-const fibonacci = (n) => {
-  let a = 0, b =1;
-  let result = [a, b]
+// const fibonacci = (n) => {
+//   let a = 0, b =1;
+//   let result = [a, b]
 
-  for (let i = 2; i < n; i++) {
-    let next = a + b;
-    result.push(next);
-    a = b;
-    b= next;
-  }
+//   for (let i = 2; i < n; i++) {
+//     let next = a + b;
+//     result.push(next);
+//     a = b;
+//     b= next;
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(fibonacci(11).join(", "))
+// console.log(fibonacci(11).join(", "))
 
 // Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
+
+
 // Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+
+// const esPrimo = (n) => {
+//   if (n < 2) return false;
+//   for (let i = 2; i <= Math.sqrt(n); i++) {
+//     if (n % i === 0) return false;
+//   }
+//   return true;
+// };
+
+// console.log(esPrimo(7))
 
 // Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 // Ejemplo:
 //    123 = 1 + 2 + 3 = 6
 //    2 = 2
 //    1234 = 1 + 2 + 3 + 4 = 10
+
+// const sum = (numero) => {
+//   array = numero.toString().split('')
+//   let result = 0;
+//   for(i = 0; i < array.length; i++) {
+//     result += Number(array[i]);
+//   }
+//   return result
+// }
+
+// console.log(sum(134523))
 
 // Desafío de programación #18: Imprimir los primeros 100 números primos
 
