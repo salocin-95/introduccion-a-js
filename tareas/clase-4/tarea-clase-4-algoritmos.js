@@ -229,9 +229,64 @@ usando  elementos de programación simples y clásicos.
 
 // Desafío de programación #18: Imprimir los primeros 100 números primos
 
+// const esPrimo = (num) => {
+//     if (num < 2) return false;
+//     for (let i = 2; i < Math.sqrt(num); i++) {
+//         if (num % i === 0) return false;
+//     }
+//     return true;
+// }
+
+// const primos = (numeros) => {
+//     let array = [];
+//     let num = 2;
+
+//     while (num < numeros) {
+//         if (esPrimo(num)) {
+//             array.push(num);
+//         }
+//         num++;
+
+//     }
+    
+//     return array;
+// };
+
+// console.log(primos(100).join(", "))
+
+
 // Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
 // Ejemplo:
 //   Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]
+
+// let alComienzo = prompt("Ingrese un numero: ")
+// let cantidad = prompt("Ingrese la cantidad de numeros primos que quiere encontrar: ")
+
+// const esPrimo = (num) => {
+//     if (num < 2) return false;
+//     for (let i = 2; i <= Math.sqrt(num); i++) {
+//         if (num % i === 0) return false;
+//     }
+//     return true;
+// }
+
+// const primos = (comienzo, cantidad) => {
+//     comienzo = Number(comienzo) + 1
+//     cantidad = Number(cantidad)
+//     let array = [];
+
+//     while (cantidad > 0) {
+//         if (esPrimo(comienzo)) {
+//             array.push(comienzo);
+//             cantidad--
+//         }
+//         comienzo++
+//     }
+    
+//     return array;
+// };
+
+// console.log(primos(alComienzo, cantidad))
 
 // Desafío de programación #20: Rotar un array hacia la izquierda una posición
 // Ejemplo:
@@ -239,10 +294,22 @@ usando  elementos de programación simples y clásicos.
 //   [5] debería quedar como [5]
 //   [4,3,2,1] debería quedar como [3,2,1,4]
 
+const rotarIzquier = (arr) => {
+    result = arr.pop()
+    arr.unshift(result)
+    return arr;
+}
+
 // Desafío de programación #21: Rotar un array a la derecha una posición
 // Ejemplo:
 //   [2,3,4,1] debería quedar como [1,2,3,4]
 //   [2,3] debería quedar como [3,2]
+
+const rotarDerecha = (arr) => {
+    result = arr.shift()
+    arr.push(result)
+    return arr;
+}
 
 // Desafío de programación #22: Invertir un array
 // Ejemplo:
