@@ -380,19 +380,19 @@ usando  elementos de programación simples y clásicos.
 // Ejemplo:
 //    [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
 
-const arrayDistintos = (array) => {
-    let result = [];
-    let i = 0;
+// const arrayDistintos = (array) => {
+//     let result = [];
+//     let i = 0;
     
-    while (i < array.length) {
-        if (!result.includes(array[i])) {  // Si el elemento aún no está en result, lo agregamos
-            result.push(array[i]);
-        }
-        i++;
-    }
+//     while (i < array.length) {
+//         if (!result.includes(array[i])) {  // Si el elemento aún no está en result, lo agregamos
+//             result.push(array[i]);
+//         }
+//         i++;
+//     }
     
-    return result;
-};
+//     return result;
+// };
 
 // ==== FALTAN TRADUCIR
 // Desafío de programación #28: Calculate the sum of first 100 prime numbers
