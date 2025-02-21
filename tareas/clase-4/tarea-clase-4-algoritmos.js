@@ -294,22 +294,22 @@ usando  elementos de programación simples y clásicos.
 //   [5] debería quedar como [5]
 //   [4,3,2,1] debería quedar como [3,2,1,4]
 
-const rotarIzquier = (arr) => {
-    result = arr.pop()
-    arr.unshift(result)
-    return arr;
-}
+// const rotarIzquier = (arr) => {
+//     result = arr.pop()
+//     arr.unshift(result)
+//     return arr;
+// }
 
 // Desafío de programación #21: Rotar un array a la derecha una posición
 // Ejemplo:
 //   [2,3,4,1] debería quedar como [1,2,3,4]
 //   [2,3] debería quedar como [3,2]
 
-const rotarDerecha = (arr) => {
-    result = arr.shift()
-    arr.push(result)
-    return arr;
-}
+// const rotarDerecha = (arr) => {
+//     result = arr.shift()
+//     arr.push(result)
+//     return arr;
+// }
 
 // Desafío de programación #22: Invertir un array
 // Ejemplo:
@@ -317,33 +317,82 @@ const rotarDerecha = (arr) => {
 //   [6,5,4,3,2,1] debería quedar como [1,2,3,4,5,6]
 //   [5,6,3] debería quedar como [3,6,5]
 
+// const invertirArray = (array) => {
+//     let result = [];
+//     for (let i = array.length - 1; i >= 0; i--) {
+//         result.push(array[i]);
+//     }
+//     return result;
+// }
+
 // Desafío de programación #23: Invertir una cadena de caracteres
 // Ejemplo:
 //   "dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
 //   "bienvenido" debería quedar como "odinevneib"
 
+// const invertirCadena = (cadena) => {
+//     let result = [];
+//     for(i = cadena.length; i >= 0; i--) {
+//         result.push(cadena[i - 1]);
+//     }
+//     return result.join("");
+// }
+
 // Desafío de programación #24: Crear una función que reciba dos dos arrays (arreglos) como argumentos y returne el resultado en un nuevo arreglo
 // Ejemplo:
 //   [1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
 
+// const concatenarArrays = (array1, array2) => { return array1.concat(array2) }
 
 // Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 // Nota: Esto se llama "diferencia simétrica" entre conjuntos
 
-// Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
-// Ejemplo:
-//   [1,2,3] y [3,7,11] debería devolver [1,2,7,11]
-//   [5,10,3] y [10,1] debería quedar como [5,3,1]
+// const diferenciaSimetrica = (array1, array2) => {
+//     return [
+//         ...array1.filter(num => !array2.includes(num)),
+//         ...array2.filter(num => !array1.includes(num))
+//     ];
+// };
 
 // Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
 // Nota; Esto se llama "resta" entre conjuntos
 // Ejemplo:
 //   [5,1,2,3,4] y [3,4] debería devolver [5,1,2]
 
+// const restaArray = (arr1, arr2) => {
+//     let result = [];
+//     for (let i = 0; i < arr1.length; i++) {
+//         let resta = false;
+//         for (let j = 0; j < arr2.length; j++) {
+//             if (arr1[i] === arr2[j]) {
+//                 resta = true;
+//                 break;
+//             }
+//         }
+//         if (!resta) {
+//             result.push(arr1[i])
+//         }
+//     }
+//     return result
+// }
+
 // Desafío de programación #27: Crear una función que reciba un array de números como argumento y retorne un array con los elementos distintos
 // Ejemplo:
 //    [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
 
+const arrayDistintos = (array) => {
+    let result = [];
+    let i = 0;
+    
+    while (i < array.length) {
+        if (!result.includes(array[i])) {  // Si el elemento aún no está en result, lo agregamos
+            result.push(array[i]);
+        }
+        i++;
+    }
+    
+    return result;
+};
 
 // ==== FALTAN TRADUCIR
 // Desafío de programación #28: Calculate the sum of first 100 prime numbers
