@@ -14,3 +14,30 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor sala
 
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
+
+const cantidadIntegrantes = document.querySelector(".cantidad-integrantes");
+const integrantes = document.querySelector("#integrantes");
+const siguiente = document.querySelector("#siguiente");
+const botonCalcular = document.querySelector("#calcular");
+const botonResetear = document.querySelector("#resetear");
+
+// `<input type="number" id="integrante">`
+
+siguiente.onclick = function()  {
+    console.log(integrantes.value)
+    for(let i = 1; i <= Number(integrantes.value); i++) {
+        cantidadIntegrantes.innerHTML += `Integrante ${i} <input type="number" id="integrante"> Edad<br>`
+        
+    }
+    botonCalcular.style.display = "block";
+    botonResetear.style.display = "block";
+}
+
+botonResetear.onclick = function() {
+    botonCalcular.style.display = "none"
+    botonResetear.style.display = "none"
+    cantidadIntegrantes.innerHTML = ``
+}
+
+let personas = document.querySelectorAll("#integrante");
+console.log(personas.value)
