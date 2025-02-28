@@ -20,24 +20,46 @@ const integrantes = document.querySelector("#integrantes");
 const siguiente = document.querySelector("#siguiente");
 const botonCalcular = document.querySelector("#calcular");
 const botonResetear = document.querySelector("#resetear");
+const resultados = document.querySelector(".resultados")
 
 // `<input type="number" id="integrante">`
 
 siguiente.onclick = function()  {
-    console.log(integrantes.value)
-    for(let i = 1; i <= Number(integrantes.value); i++) {
-        cantidadIntegrantes.innerHTML += `Integrante ${i} <input type="number" id="integrante"> Edad<br>`
-        
+    
+    if(integrantes.value == 0) {
+        alert("El valor no puede ser cero!")
+        return
     }
+
+    if(integrantes.value !== 0) {
+        cantidadIntegrantes.innerHTML = ``   
+        for(let i = 1; i <= Number(integrantes.value); i++) {
+            cantidadIntegrantes.innerHTML += `Integrante ${i} <input type="number" id="integrante"> Edad<br>`;            
+        }
     botonCalcular.style.display = "block";
     botonResetear.style.display = "block";
 }
+    }
 
 botonResetear.onclick = function() {
-    botonCalcular.style.display = "none"
-    botonResetear.style.display = "none"
-    cantidadIntegrantes.innerHTML = ``
+    botonCalcular.style.display = "none";
+    botonResetear.style.display = "none";
+    cantidadIntegrantes.innerHTML = ``;
 }
 
-let personas = document.querySelectorAll("#integrante");
-console.log(personas.value)
+
+botonCalcular.onclick = function () {
+    let personas = document.querySelectorAll("#integrante");
+    
+    let resultado = 0;
+
+    for(let i = 0; i < personas.length; i++) {
+        resultado += Number(personas[i].value);
+    } 
+    console.log(promedio)
+    resultados.style.display = "block";
+    console.log(resultado)
+    
+    promedio.innerHTML = parseFloat(resultado / personas.length);
+
+}
