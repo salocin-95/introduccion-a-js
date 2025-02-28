@@ -58,7 +58,8 @@ botonCalcular.onclick = function () {
     } 
     console.log(promedio)
     resultados.style.display = "block";
-    console.log(resultado)
+    console.log(menor)
+    console.log(mayor)
     
     promedio.innerHTML = parseFloat(resultado / personas.length);
 
