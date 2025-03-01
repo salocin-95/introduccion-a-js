@@ -34,7 +34,7 @@ siguiente.onclick = function()  {
     if(integrantes.value !== 0) {
         cantidadIntegrantes.innerHTML = ``   
         for(let i = 1; i <= Number(integrantes.value); i++) {
-            cantidadIntegrantes.innerHTML += `Integrante ${i} <input type="number" id="integrante"> Edad<br>`;            
+            cantidadIntegrantes.innerHTML += `<lablel>Integrante ${i}</label> <input type="number" id="integrante"> Edad<br>`;            
         }
     botonCalcular.style.display = "block";
     botonResetear.style.display = "block";
@@ -72,7 +72,7 @@ botonCalcular.onclick = function () {
     }
 
     resultados.style.display = "block";
-    console.log("edad menor: " + edadMenor + "edad mayor" + edadMayor)
+    console.log("edad menor: " + edadMenor + "edad mayor" + edadMayor);
     menor.innerHTML = edadMenor;
     mayor.innerHTML = edadMayor;
     promedio.innerHTML = parseFloat(resultado / personas.length);
