@@ -49,18 +49,32 @@ botonResetear.onclick = function() {
 
 
 botonCalcular.onclick = function () {
+
     let personas = document.querySelectorAll("#integrante");
-    
+    let edadMenor = personas[0].value; // 23
+    let edadMayor = personas[0].value;  
     let resultado = 0;
 
     for(let i = 0; i < personas.length; i++) {
-        resultado += Number(personas[i].value);
-    } 
-    console.log(promedio)
+        
+        let edad = Number(personas[i].value)
+
+        resultado += edad;
+        
+        if (edad < edadMenor) {
+            edadMenor = edad;
+        }
+
+        if (edad > edadMayor) {
+            edadMayor = edad;
+        }
+
+    }
+
     resultados.style.display = "block";
-    console.log(menor)
-    console.log(mayor)
-    
+    console.log("edad menor: " + edadMenor + "edad mayor" + edadMayor)
+    menor.innerHTML = edadMenor;
+    mayor.innerHTML = edadMayor;
     promedio.innerHTML = parseFloat(resultado / personas.length);
 
 }
