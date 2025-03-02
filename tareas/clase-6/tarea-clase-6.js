@@ -78,3 +78,41 @@
 //     promedio.innerHTML = parseFloat(resultado / personas.length);
 
 // }
+
+const cantidadIntegrantes = document.querySelector(".cantidad-integrantes");
+const integrantes = document.querySelector("#integrantes");
+const siguiente = document.querySelector("#siguiente");
+const botonCalcular = document.querySelector("#calcular");
+const botonResetear = document.querySelector("#resetear");
+const resultados = document.querySelector(".resultados")
+
+// `<input type="number" id="integrante">`
+
+siguiente.onclick = function()  {
+    
+    if(integrantes.value == 0) {
+        alert("El valor no puede ser cero!")
+        return
+    }
+
+    if(integrantes.value !== 0) {
+        cantidadIntegrantes.innerHTML = ``   
+        for(let i = 1; i <= Number(integrantes.value); i++) {
+            cantidadIntegrantes.innerHTML += `<lablel>Integrante ${i}</label> <input type="number" id="integrante"> Edad<br>`;            
+        }
+    botonCalcular.style.display = "block";
+    botonResetear.style.display = "block";
+}
+    } 
+    botonResetear.onclick = function() {
+        botonCalcular.style.display = "none";
+        botonResetear.style.display = "none";
+        cantidadIntegrantes.innerHTML = ``;
+}
+
+
+botonCalcular.onclick = function () {
+
+    let personas = document.querySelectorAll("#integrante");
+
+}
