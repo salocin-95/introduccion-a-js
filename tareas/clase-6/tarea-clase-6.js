@@ -98,7 +98,7 @@ siguiente.onclick = function()  {
     if(integrantes.value !== 0) {
         cantidadIntegrantes.innerHTML = ``   
         for(let i = 1; i <= Number(integrantes.value); i++) {
-            cantidadIntegrantes.innerHTML += `<lablel>Integrante ${i}</label> <input type="number" id="integrante"> Edad<br>`;            
+            cantidadIntegrantes.innerHTML += `<lablel>Integrante ${i}</label> <input type="number" id="integrante"> Sueldo<br>`;            
         }
     botonCalcular.style.display = "block";
     botonResetear.style.display = "block";
@@ -112,7 +112,32 @@ siguiente.onclick = function()  {
 
 
 botonCalcular.onclick = function () {
-
     let personas = document.querySelectorAll("#integrante");
+    let sueldoMenor = personas[0].value; // 23
+    let sueldoMayor = personas[0].value;  
+    let resultado = 0;
+
+    for(let i = 0; i < personas.length; i++) {
+        
+        let sueldo = Number(personas[i].value)
+
+        resultado += sueldo;
+        
+        if (sueldo < sueldoMenor) {
+            sueldoMenor = sueldo;
+        }
+
+        if (sueldo > sueldoMayor) {
+            sueldoMayor = sueldo;
+        }
+
+    }
+
+    resultados.style.display = "block";
+    console.log("Sueld menor: " + sueldoMenor + "sueldo mayor" + sueldoMayor);
+    menor.innerHTML = sueldoMenor;
+    mayor.innerHTML = sueldoMayor;
+    promedio.innerHTML = parseFloat(resultado / personas.length);
+
 
 }
